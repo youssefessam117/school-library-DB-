@@ -16,6 +16,15 @@ const userSchema = mongoose.Schema(
       enum: ["verified", "not verified"],
       default: "not verified",
     },
+    role: {
+      type: String,
+      enum: ["user", "admin"],
+      default: "user",
+    },
+    userBooks: {
+      type: [mongoose.Types.ObjectId],
+      ref: "book",
+    },
   },
   { timestamps: true }
 );

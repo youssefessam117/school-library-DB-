@@ -4,12 +4,8 @@ export const hashPassword = (
   password,
   saltround = parseInt(process.env.saltround)
 ) => {
-  try {
-    const hash = bcrypt.hashSync(password, saltround);
-    return hash;
-  } catch (error) {
-    console.log(error);
-  }
+  const hash = bcrypt.hashSync(password, saltround);
+  return hash;
 };
 
 export const checkedPassword = (password, hash) => {

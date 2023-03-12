@@ -1,0 +1,570 @@
+{
+	"info": {
+		"_postman_id": "cf200ea8-80f7-4535-a8e6-ea27e3da5c14",
+		"name": "assignment 8",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24657532"
+	},
+	"item": [
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"youssef\",\r\n    \"email\":\"zbzlqxermjodleazkb@bbitq.com\",\r\n    \"password\":\"1234\",\r\n    \"age\":25\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/user/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "signin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"zbzlqxermjodleazkb@bbitq.com\",\r\n    \"password\":\"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/user/signin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"signin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateuser",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoieW91c3NlZiIsIl9pZCI6IjY0MDBhZTAxZTEwNTY4NTQ0ZDk3ZmFhYSIsImVtYWlsIjoiam9obnRpYXN0b29AZ21haWwuY29tIiwiY3JlYXRlZEF0IjoiMjAyMy0wMy0wMlQxNDowOTowNS45MzRaIiwic3RhdHVzIjoiQWN0aXZlIiwiaWF0IjoxNjc3ODU2NTQ5fQ.QrOWmOyIDm_5N-UHlhdlx7f4UnaeYQN278mRPw4yeas",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"johntiastoo@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/user/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deletuser",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoic2FyYWgiLCJfaWQiOiI2M2YzNjgzNzQ0M2Y3YjFkNTkxY2M5NzMiLCJlbWFpbCI6InNhcmFoYnNhZGFzZGxzbmxzQGdtYWlsLmNvbSIsImlhdCI6MTY3NjkwMjMwMX0.W3DPE9py2um64Kw5gEmlS__-S5H0pQbmzGvm9bd4oD4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/user/delete?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoic2FyYWgiLCJfaWQiOiI2M2YzNjgzNzQ0M2Y3YjFkNTkxY2M5NzMiLCJlbWFpbCI6InNhcmFoQGdtYWlsLmNvbSIsImlhdCI6MTY3Njg5OTIwMn0.OkG131D24Xz7FYxr1rZuDY8irltY897IblyMA4L67Qw",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoic2FyYWgiLCJfaWQiOiI2M2YzNjgzNzQ0M2Y3YjFkNTkxY2M5NzMiLCJlbWFpbCI6InNhcmFoQGdtYWlsLmNvbSIsImlhdCI6MTY3Njg5OTIwMn0.OkG131D24Xz7FYxr1rZuDY8irltY897IblyMA4L67Qw"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get user data",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoieW91c3NlZiIsIl9pZCI6IjY0MGRjMGY0ODRjNzQ2MjM5NGUxNTU1MSIsImVtYWlsIjoiam9obnRpYXN0b29AZ21haWwuY29tIiwiY3JlYXRlZEF0IjoiMjAyMy0wMy0xMlQxMjowOToyNC4xMTFaIiwic3RhdHVzIjoiQWN0aXZlIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjc4NjIzMDA5fQ.ceANTMGFkjFBzrR-umh5gKXjvYEV1lJoySqivl37Vro",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/user/getuserdata",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"getuserdata"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "verify user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/user/verify/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"verify",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "reset password req",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"johntiastoo@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/user/resetpassword/request",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"resetpassword",
+								"request"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "reset password  config",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"newPassword\":\"123456789\",\r\n    \"code\":\"1234\",\r\n    \"email\":\"johntiastoo@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/user/resetpassword/config",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"resetpassword",
+								"config"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "soft delete",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoieW91c3NlZiIsIl9pZCI6IjY0MDBhZTAxZTEwNTY4NTQ0ZDk3ZmFhYSIsImVtYWlsIjoiam9obnRpYXN0b29AZ21haWwuY29tIiwiY3JlYXRlZEF0IjoiMjAyMy0wMy0wMlQxNDowOTowNS45MzRaIiwic3RhdHVzIjoiQWN0aXZlIiwiaWF0IjoxNjc3ODU2NTQ5fQ.QrOWmOyIDm_5N-UHlhdlx7f4UnaeYQN278mRPw4yeas",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/user/softdelete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"softdelete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "books",
+			"item": [
+				{
+					"name": "add book",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoieW91c3NlZiIsIl9pZCI6IjY0MGRjMGY0ODRjNzQ2MjM5NGUxNTU1MSIsImVtYWlsIjoiam9obnRpYXN0b29AZ21haWwuY29tIiwiY3JlYXRlZEF0IjoiMjAyMy0wMy0xMlQxMjowOToyNC4xMTFaIiwic3RhdHVzIjoiQWN0aXZlIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjc4NjIzMDA5fQ.ceANTMGFkjFBzrR-umh5gKXjvYEV1lJoySqivl37Vro",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "HarryBooter4",
+									"type": "text"
+								},
+								{
+									"key": "book photo",
+									"type": "file",
+									"src": "/D:/youssef/136251.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/book/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"book",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "borrow book",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoieW91c3NlZiIsIl9pZCI6IjY0MGRjMGY0ODRjNzQ2MjM5NGUxNTU1MSIsImVtYWlsIjoiam9obnRpYXN0b29AZ21haWwuY29tIiwiY3JlYXRlZEF0IjoiMjAyMy0wMy0xMlQxMjowOToyNC4xMTFaIiwic3RhdHVzIjoiQWN0aXZlIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjc4NjIzMDA5fQ.ceANTMGFkjFBzrR-umh5gKXjvYEV1lJoySqivl37Vro",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"_id\":\"640a4fb812ddd442ab93b8ee\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/book/borrow",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"book",
+								"borrow"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "calculatingFine",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoieW91c3NlZiIsIl9pZCI6IjY0MDBhZTAxZTEwNTY4NTQ0ZDk3ZmFhYSIsImVtYWlsIjoiam9obnRpYXN0b29AZ21haWwuY29tIiwiY3JlYXRlZEF0IjoiMjAyMy0wMy0wMlQxNDowOTowNS45MzRaIiwic3RhdHVzIjoibm90QWN0aXZlIiwicm9sZSI6InVzZXIiLCJpYXQiOjE2NzgyODQ5MjV9.XSNlheiqmX9pyGNpIyLbJeKgSfFjCO87MoHbJmfG9M8",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"_id\":\"640a384ceffb9af6219ac7e8\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/book/calculatingFine",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"book",
+								"calculatingFine"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "returnBook",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoieW91c3NlZiIsIl9pZCI6IjY0MGRjMGY0ODRjNzQ2MjM5NGUxNTU1MSIsImVtYWlsIjoiam9obnRpYXN0b29AZ21haWwuY29tIiwiY3JlYXRlZEF0IjoiMjAyMy0wMy0xMlQxMjowOToyNC4xMTFaIiwic3RhdHVzIjoiQWN0aXZlIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjc4NjIzMDA5fQ.ceANTMGFkjFBzrR-umh5gKXjvYEV1lJoySqivl37Vro",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"_id\":\"640a4fb812ddd442ab93b8ee\",\r\n    \"userId\":\"640dc0f484c7462394e15551\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/book/returnBook",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"book",
+								"returnBook"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllBooks",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoieW91c3NlZiIsIl9pZCI6IjY0MDBhZTAxZTEwNTY4NTQ0ZDk3ZmFhYSIsImVtYWlsIjoiam9obnRpYXN0b29AZ21haWwuY29tIiwiY3JlYXRlZEF0IjoiMjAyMy0wMy0wMlQxNDowOTowNS45MzRaIiwic3RhdHVzIjoibm90QWN0aXZlIiwicm9sZSI6InVzZXIiLCJpYXQiOjE2NzgyODQ5MjV9.XSNlheiqmX9pyGNpIyLbJeKgSfFjCO87MoHbJmfG9M8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"_id\":\"640a384ceffb9af6219ac7e8\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/book/getAllBooks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"book",
+								"getAllBooks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getBorrowedBooks",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoieW91c3NlZiIsIl9pZCI6IjY0MGE0ZjM5MTJkZGQ0NDJhYjkzYjhlOCIsImVtYWlsIjoiam9obnRpYXN0b29AZ21haWwuY29tIiwiY3JlYXRlZEF0IjoiMjAyMy0wMy0wOVQyMToyNzoyMS4zMTJaIiwic3RhdHVzIjoiQWN0aXZlIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjc4Mzk3MzM1fQ.j-toH0RPYmrqWBghVk2Cm_OwiGI5v_koPvm0fP2zSv8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"_id\":\"640a384ceffb9af6219ac7e8\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/book/getBorrowedBooks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"book",
+								"getBorrowedBooks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoieW91c3NlZiIsIl9pZCI6IjY0MGE0ZjM5MTJkZGQ0NDJhYjkzYjhlOCIsImVtYWlsIjoiam9obnRpYXN0b29AZ21haWwuY29tIiwiY3JlYXRlZEF0IjoiMjAyMy0wMy0wOVQyMToyNzoyMS4zMTJaIiwic3RhdHVzIjoiQWN0aXZlIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjc4Mzk3MzM1fQ.j-toH0RPYmrqWBghVk2Cm_OwiGI5v_koPvm0fP2zSv8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"search\":\"H\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/book/search",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"book",
+								"search"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
